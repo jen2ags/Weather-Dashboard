@@ -9,19 +9,73 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <h1>Weather Dashboard</h1>
+    <header class="title">
+        <h1 class="">Weather Dashboard</h1>
     </header>
-<section>
-    <form>Search for a City:
+    <section class="hero">
+        <div class="hero-form">
+            <form>
+                <label for="city">Search for a City:</label>
+                <input class="form-input" type="text" placeholder="City"/>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </section>
+    <section class="recent-search">
+        <div class="container">
+            <p class="recent-city">#1</p>
+        </div>
+        <div class="container">
+            <p class="recent-city">#2</p>
+        </div>
+        <div class="container">
+            <p class="recent-city">#3</p>
+        </div>
+        <div class="container">
+            <p class="recent-city">#4</p>
+        </div>
+        <div class="container">
+            <p class="recent-city">#5</p>
+        </div>
+        <div class="container">
+            <p class="recent-city">#6</p>
+        </div>
+        <div class="container">
+            <p class="recent-city">#7</p>
+        </div>
+        <div class="container">
+            <p class="recent-city">#8</p>
+        </div>
+    </section>
+    <section class="current">
+        <div>
+            <h3 class="current-city">Current City Name and Date</h3>
+                <div class="temp">Temperature</div>
+                <div class="wind">Wind</div>
+                <div class="humidity">Humidity</div>
+                <div class="uv">UV Index</div>
+        </div>
+    </section>
 
-    </form>
-    <div>"This will hold the tiles with each City to compare"</div>
-</section>
-<section>
-    <div>Current City's Weather Data</div>
-    <div>5-Day Forecast:(Pull data from weather API)</div>
-</section>
+    <section class="5-day-forecast">
+        <h3>5-Day Forecast:</h3>
+        <div class="card">
+            <p>Information day #1</p>
+        </div>
+        <div class="card">
+            <p>Information day #2</p>
+        </div>
+        <div class="card">
+            <p>Information day #3</p>
+        </div>
+        <div class="card">
+            <p>Information day #4</p>
+        </div>
+        <div class="card">
+            <p>Information day #5</p>
+        </div>
+    </section>
+    
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="assets\js\script.js"></script>
 </body>
