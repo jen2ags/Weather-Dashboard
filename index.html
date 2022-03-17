@@ -4,81 +4,95 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"/>
     <link rel="stylesheet" href="assets\css\style.css"/>
     <title>Document</title>
 </head>
 <!--Title section-->
 <body>
-    <header class="title">
-        <h1 class="">Weather Dashboard</h1>
+    <header class="hero is-large is-link my-3 mx-6">
+        <h1 class="title is-2 has-text-centered">Weather Dashboard</h1>
     </header>
+
     <!--Form to input City-->
-    <section class="hero">
-        <div class="hero-form">
-            <form>
-                <label for="city">Search for a City:</label>
-                <input class="form-input" type="text" placeholder="City"/>
-                <button type="submit">Search</button>
-            </form>
+    <section class="tile is-ancestor mx-2 my-2">
+        <div class="tile is-4 is-vertical is-parent">
+          <div class="tile is-child box">
+            <div class="field">
+                <label class="label">Search for a City:</label>
+                    <div class="control">
+                        <input class="input" type="text" Placeholder="City">
+                    </div>
+            <div class="field">
+                <div class="control"></div>
+                    <button class="button is-link">Search</button>
+                </div>
+            </div>
+          </div>
+
+           <!--Recent searches populate here to compare-->
+          <div class="tile is-child box">
+            <div class="container">
+                <p class="recent-city box">#1</p>
+            </div>
+            <div class="container">
+                <p class="recent-city box">#2</p>
+            </div>
+            <div class="container">
+                <p class="recent-city box">#3</p>
+            </div>
+            <div class="container">
+                <p class="recent-city box">#4</p>
+            </div>
+            <div class="container">
+                <p class="recent-city box">#5</p>
+            </div>
+            <div class="container">
+                <p class="recent-city box">#6</p>
+            </div>
+            <div class="container">
+                <p class="recent-city box">#7</p>
+            </div>
+            <div class="container">
+                <p class="recent-city box">#8</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Current day weather data display-->
+
+      <div class="tile is-8 is-vertical is-parent">
+        <div class="tile is-child box">
+          <h3 class=" title is-4 current-city">Current City</h3> 
+          <h3 class="title is-4 current-date">Date</h3>
+          <div class="temp">Temperature:</div>
+          <div class="wind">Wind:</div>
+          <div class="humidity">Humidity:</div>
+          <div class="uv">UV Index:</div>
+        </div>
+
+        <!--5-day forecast for the city searched-->
+        <div class="tile is-child box">
+            <h3 class="title is-4 5-day-forecast">5-Day Forecast:</h3>
+                <div class="card box">
+                    <p>Information day #1</p>
+                </div>
+                <div class="card box">
+                    <p>Information day #2</p>
+                </div>
+                <div class="card box">
+                    <p>Information day #3</p>
+                </div>
+                <div class="card box">
+                    <p>Information day #4</p>
+                </div>
+                <div class="card box">
+                    <p>Information day #5</p>
+                </div>
         </div>
     </section>
-    <!--Recent searches populate here to compare-->
-    <section class="recent-search">
-        <div class="container">
-            <p class="recent-city">#1</p>
-        </div>
-        <div class="container">
-            <p class="recent-city">#2</p>
-        </div>
-        <div class="container">
-            <p class="recent-city">#3</p>
-        </div>
-        <div class="container">
-            <p class="recent-city">#4</p>
-        </div>
-        <div class="container">
-            <p class="recent-city">#5</p>
-        </div>
-        <div class="container">
-            <p class="recent-city">#6</p>
-        </div>
-        <div class="container">
-            <p class="recent-city">#7</p>
-        </div>
-        <div class="container">
-            <p class="recent-city">#8</p>
-        </div>
-    </section>
-    <!--Current day weather data display-->
-    <section class="current">
-        <div>
-            <h3 class="current-city">Current City Name and Date</h3>
-                <div class="temp">Temperature</div>
-                <div class="wind">Wind</div>
-                <div class="humidity">Humidity</div>
-                <div class="uv">UV Index</div>
-        </div>
-    </section>
-    <!--5-day forecast for the city searched-->
-    <section class="5-day-forecast">
-        <h3>5-Day Forecast:</h3>
-        <div class="card">
-            <p>Information day #1</p>
-        </div>
-        <div class="card">
-            <p>Information day #2</p>
-        </div>
-        <div class="card">
-            <p>Information day #3</p>
-        </div>
-        <div class="card">
-            <p>Information day #4</p>
-        </div>
-        <div class="card">
-            <p>Information day #5</p>
-        </div>
-    </section>
+    
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="assets\js\script.js"></script>
