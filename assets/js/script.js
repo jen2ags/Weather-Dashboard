@@ -43,7 +43,26 @@ cityFormEl.addEventListener("submit", formSubmitHandler);
    // weatherContainerEl.textContent = "";
    // weatherSearchTerm.textContent = searchTerm;
 
+   var getWeatherData = function(cityName) {
+
+    var apiUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=5&appid=fe7326fd08b73adb3c80827fa94555ff&units=imperial";
+
+   
+    fetch(apiUrl).then(function(response) {
+        response.json().then(function(data) {
+           console.log(data, cityName);
+
+    var longitude = 
+
+    var apiUrl2 = "https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude=minutely,hourly,alerts&appid=fe7326fd08b73adb3c80827fa94555ff&units=imperial";
     
+
+}
+
+        });
+    });
+    
+};
 
 
 //"http://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=5&appid=fe7326fd08b73adb3c80827fa94555ff&units=imperial"
