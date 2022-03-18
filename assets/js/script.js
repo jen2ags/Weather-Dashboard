@@ -12,6 +12,14 @@ var day1IconEl = document.querySelector("#day1-icon");
 var day1TempEl = document.querySelector("#day1-temp");
 var day1WindEl = document.querySelector("#day1-wind");
 var day1HumidityEl = document.querySelector("#day1-humidity");
+var day2IconEl = document.querySelector("#day2-icon");
+var day2TempEl = document.querySelector("#day2-temp");
+var day2WindEl = document.querySelector("#day2-wind");
+var day2HumidityEl = document.querySelector("#day2-humidity");
+var day3IconEl = document.querySelector("#day3-icon");
+var day3TempEl = document.querySelector("#day3-temp");
+var day3WindEl = document.querySelector("#day3-wind");
+var day3HumidityEl = document.querySelector("#day3-humidity");
 
 var formSubmitHandler = function(event) {
     event.preventDefault();
@@ -37,13 +45,16 @@ var getWeatherData = function(cityName) {
         response.json().then(function(data) {
            console.log(data, cityName);
 
+            //pull out the lon and lat to use in the next api
            var longitude=data[0].lon;
            var latitude=data[0].lat;
 
+            //display's the city name in the current weather
            var currentCityName =data[0].name;    
             currentCityEl.textContent =currentCityName;
             console.log(data);
 
+            //second api to pull all current and forecast weather data
            var apiUrl2 = "https://api.openweathermap.org/data/2.5/onecall?lat=" + latitude + "&lon=" + longitude + "&exclude=minutely,hourly,alerts&appid=fe7326fd08b73adb3c80827fa94555ff&units=imperial";
         
            fetch(apiUrl2).then(function(response) {
@@ -62,9 +73,9 @@ var getWeatherData = function(cityName) {
 cityFormEl.addEventListener("submit", formSubmitHandler);
 
 
-
+//displays the current day's weather
 var displayCurrentWeather = function(data) {
-    
+    //display's weather icon, temp, wind speed, humidity, & UV index
     var currentIcon=data.current.weather[0].icon;
     currentIconEl.textContent=currentIcon;
 
@@ -81,8 +92,10 @@ var displayCurrentWeather = function(data) {
     currentUvEl.textContent=currentUv;
 };
 
+//displays the 5 day forecast and the weather icon, temp, wind, and humidity for each day
 var display5DayForecast = function(data) {
 
+    //day 1 data display
     var day1Icon=data.daily[0].weather[0].icon;
     day1IconEl.textContent= day1Icon;
 
@@ -92,6 +105,57 @@ var display5DayForecast = function(data) {
     var day1Wind=data.daily[0].wind_speed;
     day1WindEl.textContent= day1Wind;
 
+    var day1Humidity=data.daily[0].humidity;
+    day1HumidityEl.textContent= day1Humidity;
+
+    //day 2 data display
+    var day2Icon=data.daily[1].weather[0].icon;
+    day2IconEl.textContent= day2Icon;
+
+    var day2Temp=data.daily[1].temp.day;
+    day2TempEl.textContent= day2Temp;
+
+    var day2Wind=data.daily[1].wind_speed;
+    day2WindEl.textContent= day2Wind;
+
+    var day2Humidity=data.daily[1].humidity;
+    day2HumidityEl.textContent= day2Humidity;
+
+    //day 3 data display
+    var day3Icon=data.daily[2].weather[0].icon;
+    day3IconEl.textContent= day3Icon;
+
+    var day3Temp=data.daily[2].temp.day;
+    day3TempEl.textContent= day3Temp;
+
+    var day3Wind=data.daily[2].wind_speed;
+    day3WindEl.textContent= day3Wind;
+
+    var day3Humidity=data.daily[2].humidity;
+    day3HumidityEl.textContent= day3Humidity;
+
+    //day 4 data display
+    var day1Icon=data.daily[0].weather[0].icon;
+    day1IconEl.textContent= day1Icon;
+
+    var day1Temp=data.daily[0].temp.day;
+    day1TempEl.textContent= day1Temp;
+
+    var day1Wind=data.daily[0].wind_speed;
+    day1WindEl.textContent= day1Wind;
+
+    var day1Humidity=data.daily[0].humidity;
+    day1HumidityEl.textContent= day1Humidity;
+
+    //day 5 data display
+    var day1Icon=data.daily[0].weather[0].icon;
+    day1IconEl.textContent= day1Icon;
+
+    var day1Temp=data.daily[0].temp.day;
+    day1TempEl.textContent= day1Temp;
+
+    var day1Wind=data.daily[0].wind_speed;
+    day1WindEl.textContent= day1Wind;
 
     var day1Humidity=data.daily[0].humidity;
     day1HumidityEl.textContent= day1Humidity;
