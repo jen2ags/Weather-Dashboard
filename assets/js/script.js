@@ -3,6 +3,7 @@ var cityInputEl = document.querySelector("#city-input");
 var weatherContainerEl = document.querySelector("#current-weather-container");
 var weatherSearchTerm = document.querySelector("#weather-search-term");
 
+
 var formSubmitHandler = function(event) {
     event.preventDefault();
     //get value from input element
@@ -26,13 +27,19 @@ var getWeatherData = function(cityName) {
     fetch(apiUrl).then(function(response) {
         response.json().then(function(data) {
            console.log(data, cityName);
-        });
-        for (var i=0) {
-        var longitude = cityName[i].lon;
-    console.log(longitude);
 
-    var apiUrl2 = "https://api.openweathermap.org/data/2.5/onecall?lat=" + latitude + "&lon=" + longitude + "&exclude=minutely,hourly,alerts&appid=fe7326fd08b73adb3c80827fa94555ff&units=imperial";
-        };
+           var longitude=data[0].lon;
+           var latitude=data[0].lat;
+
+           var apiUrl2 = "https://api.openweathermap.org/data/2.5/onecall?lat=" + latitude + "&lon=" + longitude + "&exclude=minutely,hourly,alerts&appid=fe7326fd08b73adb3c80827fa94555ff&units=imperial";
+        
+           fetch(apiUrl2).then(function(response) {
+               response.json().then(function(data) {
+                   console.log(data);
+               })
+        });
+        
+    })
     });
     
 };
