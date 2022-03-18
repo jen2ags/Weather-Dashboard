@@ -18,10 +18,10 @@
     <section class="tile is-ancestor mx-2 my-2">
         <div class="tile is-3 is-vertical is-parent">
           <div class="tile is-child box">
-            <div class="field">
+            <div class="field" id="city-form">
                 <label class="label">Search for a City:</label>
                     <div class="control">
-                        <input class="input" type="text" Placeholder="City">
+                        <input class="city" id="city" type="text" Placeholder="City">
                     </div>
             <div class="field">
                 <div class="control"></div>
@@ -64,9 +64,9 @@
 
       <div class="tile is-9 is-vertical is-parent">
         <div class="tile is-child box">
-          <h3 class=" title is-4 current-city">Current City</h3> 
+          <h3 class=" title is-4 current-city"><span id = "weather-search-term"></span></h3> 
           <h3 class="title is-4 current-date">Date</h3>
-          <div class="temp">Temperature:</div>
+          <div class="temp" id="current-weather-container">Temperature:</div>
           <div class="wind">Wind:</div>
           <div class="humidity">Humidity:</div>
           <div class="uv">UV Index:</div>
