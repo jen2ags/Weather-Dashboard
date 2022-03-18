@@ -7,6 +7,11 @@ var currentTempEl = document.querySelector("#current-temp");
 var currentWindEl = document.querySelector("#current-wind");
 var currentHumidityEl = document.querySelector("#current-humidity");
 var currentUvEl = document.querySelector("#current-uv");
+var currentIconEl = document.querySelector("#current-icon");
+var day1IconEl = document.querySelector("#day1-icon");
+var day1TempEl = document.querySelector("#day1-temp");
+var day1WindEl = document.querySelector("#day1-wind");
+var day1HumidityEl = document.querySelector("#day1-humidity");
 
 var formSubmitHandler = function(event) {
     event.preventDefault();
@@ -45,6 +50,7 @@ var getWeatherData = function(cityName) {
                response.json().then(function(data) {
                    console.log(data);
                   displayCurrentWeather(data);
+                  display5DayForecast(data);
                })
         });
         
@@ -59,6 +65,9 @@ cityFormEl.addEventListener("submit", formSubmitHandler);
 
 var displayCurrentWeather = function(data) {
     
+    var currentIcon=data.current.weather[0].icon;
+    currentIconEl.textContent=currentIcon;
+
     var currentTemp=data.current.temp;
     currentTempEl.textContent=currentTemp;
 
@@ -71,3 +80,21 @@ var displayCurrentWeather = function(data) {
     var currentUv=data.current.uvi;
     currentUvEl.textContent=currentUv;
 };
+
+var display5DayForecast = function(data) {
+
+    var day1Icon=data.daily[0].weather[0].icon;
+    day1IconEl.textContent= day1Icon;
+
+    var day1Temp=data.daily[0].temp.day;
+    day1TempEl.textContent= day1Temp;
+
+    var day1Wind=data.daily[0].wind_speed;
+    day1WindEl.textContent= day1Wind;
+
+
+    var day1Humidity=data.daily[0].humidity;
+    day1HumidityEl.textContent= day1Humidity;
+
+};
+
