@@ -20,6 +20,14 @@ var day3IconEl = document.querySelector("#day3-icon");
 var day3TempEl = document.querySelector("#day3-temp");
 var day3WindEl = document.querySelector("#day3-wind");
 var day3HumidityEl = document.querySelector("#day3-humidity");
+var day4IconEl = document.querySelector("#day4-icon");
+var day4TempEl = document.querySelector("#day4-temp");
+var day4WindEl = document.querySelector("#day4-wind");
+var day4HumidityEl = document.querySelector("#day4-humidity");
+var day5IconEl = document.querySelector("#day5-icon");
+var day5TempEl = document.querySelector("#day5-temp");
+var day5WindEl = document.querySelector("#day5-wind");
+var day5HumidityEl = document.querySelector("#day5-humidity");
 
 var formSubmitHandler = function(event) {
     event.preventDefault();
@@ -135,30 +143,30 @@ var display5DayForecast = function(data) {
     day3HumidityEl.textContent= day3Humidity;
 
     //day 4 data display
-    var day1Icon=data.daily[0].weather[0].icon;
-    day1IconEl.textContent= day1Icon;
+    var day4Icon=data.daily[3].weather[0].icon;
+    day4IconEl.textContent= day4Icon;
 
-    var day1Temp=data.daily[0].temp.day;
-    day1TempEl.textContent= day1Temp;
+    var day4Temp=data.daily[3].temp.day;
+    day4TempEl.textContent= day4Temp;
 
-    var day1Wind=data.daily[0].wind_speed;
-    day1WindEl.textContent= day1Wind;
+    var day4Wind=data.daily[3].wind_speed;
+    day4WindEl.textContent= day4Wind;
 
-    var day1Humidity=data.daily[0].humidity;
-    day1HumidityEl.textContent= day1Humidity;
+    var day4Humidity=data.daily[3].humidity;
+    day4HumidityEl.textContent= day4Humidity;
 
     //day 5 data display
-    var day1Icon=data.daily[0].weather[0].icon;
-    day1IconEl.textContent= day1Icon;
+    var day5Icon=data.daily[4].weather[0].icon;
+    day5IconEl.textContent= day5Icon;
 
-    var day1Temp=data.daily[0].temp.day;
-    day1TempEl.textContent= day1Temp;
+    var day5Temp=data.daily[4].temp.day;
+    day5TempEl.textContent= day5Temp;
 
-    var day1Wind=data.daily[0].wind_speed;
-    day1WindEl.textContent= day1Wind;
+    var day5Wind=data.daily[4].wind_speed;
+    day5WindEl.textContent= day5Wind;
 
-    var day1Humidity=data.daily[0].humidity;
-    day1HumidityEl.textContent= day1Humidity;
+    var day5Humidity=data.daily[4].humidity;
+    day5HumidityEl.textContent= day5Humidity;
 
 };
 
