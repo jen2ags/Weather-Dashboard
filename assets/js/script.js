@@ -48,16 +48,11 @@ cityFormEl.addEventListener("submit", formSubmitHandler);
 
 
 
-//var displayCurrentWeather = function(currentWeather, searchTerm) {
-    //console.log(currentWeather);
-    //console.log(searchTerm);
+var displayCurrentWeather = function() {
+    
+    var currentCityName =data[0].name;    
+    document.getElementById("#current-city").innerHTML = currentCityName;
+    console.log(currentCityName);
 
-    //clear old content
-   // weatherContainerEl.textContent = "";
-   // weatherSearchTerm.textContent = searchTerm;
-
-
-//"http://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=5&appid=fe7326fd08b73adb3c80827fa94555ff&units=imperial"
-
-//https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}&units=imperial";
-
+ 
+};
