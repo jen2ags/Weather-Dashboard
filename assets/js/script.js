@@ -1,5 +1,5 @@
 var cityFormEl = document.querySelector("#city-form");
-var cityInputEl = document.querySelector("#city");
+var cityInputEl = document.querySelector("#city-input");
 var weatherContainerEl = document.querySelector("#current-weather-container");
 var weatherSearchTerm = document.querySelector("#weather-search-term");
 
@@ -33,13 +33,15 @@ var getWeatherData = function(cityName) {
 
 cityFormEl.addEventListener("submit", formSubmitHandler);
 
-var displayCurrentWeather = function(currentWeather, searchTerm) {
-    console.log(currentWeather);
-    console.log(searchTerm);
+
+
+//var displayCurrentWeather = function(currentWeather, searchTerm) {
+    //console.log(currentWeather);
+    //console.log(searchTerm);
 
     //clear old content
-    weatherContainerEl.textContent = "";
-    weatherSearchTerm.textContent = searchTerm;
+   // weatherContainerEl.textContent = "";
+   // weatherSearchTerm.textContent = searchTerm;
 
     
 
@@ -47,3 +49,4 @@ var displayCurrentWeather = function(currentWeather, searchTerm) {
 //"http://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=5&appid=fe7326fd08b73adb3c80827fa94555ff&units=imperial"
 
 //https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}&units=imperial";
+
