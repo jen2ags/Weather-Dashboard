@@ -3,7 +3,10 @@ var cityInputEl = document.querySelector("#city-input");
 var weatherContainerEl = document.querySelector("#current-weather-container");
 var weatherSearchTerm = document.querySelector("#weather-search-term");
 var currentCityEl = document.querySelector("#current-city");
-
+var currentTempEl = document.querySelector("#current-temp");
+var currentWindEl = document.querySelector("#current-wind");
+var currentHumidityEl = document.querySelector("#current-humidity");
+var currentUvEl = document.querySelector("#current-uv");
 
 var formSubmitHandler = function(event) {
     event.preventDefault();
@@ -27,7 +30,7 @@ var getWeatherData = function(cityName) {
     // make a request to the url
     fetch(apiUrl).then(function(response) {
         response.json().then(function(data) {
-           //console.log(data, cityName);
+           console.log(data, cityName);
 
            var longitude=data[0].lon;
            var latitude=data[0].lat;
@@ -40,6 +43,7 @@ var getWeatherData = function(cityName) {
         
            fetch(apiUrl2).then(function(response) {
                response.json().then(function(data) {
+                   console.log(data);
                   displayCurrentWeather(data);
                })
         });
@@ -53,8 +57,17 @@ cityFormEl.addEventListener("submit", formSubmitHandler);
 
 
 
-//var displayCurrentWeather = function(data) {
+var displayCurrentWeather = function(data) {
     
+    var currentTemp=data.current.temp;
+    currentTempEl.textContent=currentTemp;
 
- 
-//};
+    var currentWind=data.current.wind_speed;
+    currentWindEl.textContent=currentWind;
+
+    var currentHumidity=data.current.humidity;
+    currentHumidityEl.textContent=currentHumidity;
+
+    var currentUv=data.current.uvi;
+    currentUvEl.textContent=currentUv;
+};
