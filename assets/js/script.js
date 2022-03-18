@@ -20,13 +20,19 @@ var formSubmitHandler = function(event) {
 
 var getWeatherData = function(cityName) {
     //format the github api url
-    var apiUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=5&appid=fe7326fd08b73adb3c80827fa94555ff&units=imperial";
+    var apiUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=1&appid=fe7326fd08b73adb3c80827fa94555ff&units=imperial";
 
     // make a request to the url
     fetch(apiUrl).then(function(response) {
         response.json().then(function(data) {
            console.log(data, cityName);
         });
+        for (var i=0) {
+        var longitude = cityName[i].lon;
+    console.log(longitude);
+
+    var apiUrl2 = "https://api.openweathermap.org/data/2.5/onecall?lat=" + latitude + "&lon=" + longitude + "&exclude=minutely,hourly,alerts&appid=fe7326fd08b73adb3c80827fa94555ff&units=imperial";
+        };
     });
     
 };
@@ -42,27 +48,6 @@ cityFormEl.addEventListener("submit", formSubmitHandler);
     //clear old content
    // weatherContainerEl.textContent = "";
    // weatherSearchTerm.textContent = searchTerm;
-
-   var getWeatherData = function(cityName) {
-
-    var apiUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=5&appid=fe7326fd08b73adb3c80827fa94555ff&units=imperial";
-
-   
-    fetch(apiUrl).then(function(response) {
-        response.json().then(function(data) {
-           console.log(data, cityName);
-
-    var longitude = 
-
-    var apiUrl2 = "https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude=minutely,hourly,alerts&appid=fe7326fd08b73adb3c80827fa94555ff&units=imperial";
-    
-
-}
-
-        });
-    });
-    
-};
 
 
 //"http://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=5&appid=fe7326fd08b73adb3c80827fa94555ff&units=imperial"
