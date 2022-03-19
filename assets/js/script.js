@@ -48,7 +48,7 @@ var formSubmitHandler = function(event) {
 
 var getWeatherData = function(cityName) {
     //format the github api url
-    var apiUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=1&appid=fe7326fd08b73adb3c80827fa94555ff&units=imperial";
+    var apiUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=1&appid=fe7326fd08b73adb3c80827fa94555ff&units=imperial";
 
     // make a request to the url
     fetch(apiUrl).then(function(response) {
