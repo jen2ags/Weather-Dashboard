@@ -88,14 +88,14 @@ var displayCurrentWeather = function(data) {
     
     //display's weather icon, temp, wind speed, humidity, & UV index
     var currentIcon=data.current.weather[0].icon;
-    currentIconEl.textContent=currentIcon;
+    
 
     var currentWeatherIcon = document.createElement("IMG");
     currentWeatherIcon.setAttribute("src", "http://openweathermap.org/img/wn/" + currentIcon + "@2x.png");
-    currentWeatherIcon.setAttribute("width", "40");
-    currentWeatherIcon.setAttribute("height", "40");
+    currentWeatherIcon.setAttribute("width", "50");
+    currentWeatherIcon.setAttribute("height", "50");
     currentWeatherIcon.setAttribute("alt", "Weather Icon");
-    document.body.appendChild(currentWeatherIcon);
+    document.getElementById("current-icon").appendChild(currentWeatherIcon);
 
     var currentTemp=data.current.temp;
     currentTempEl.textContent=currentTemp;
@@ -115,7 +115,12 @@ var display5DayForecast = function(data) {
 
     //day 1 data display
     var day1Icon=data.daily[0].weather[0].icon;
-    day1IconEl.textContent= day1Icon;
+    var iconDay1 = document.createElement("IMG");
+    iconDay1.setAttribute("src", "http://openweathermap.org/img/wn/" + day1Icon + "@2x.png");
+    iconDay1.setAttribute("width", "30");
+    iconDay1.setAttribute("height", "30");
+    iconDay1.setAttribute("alt", "Weather Icon");
+    document.getElementById("day1-icon").appendChild(iconDay1);
 
     var day1Temp=data.daily[0].temp.day;
     day1TempEl.textContent= day1Temp;
@@ -128,7 +133,12 @@ var display5DayForecast = function(data) {
 
     //day 2 data display
     var day2Icon=data.daily[1].weather[0].icon;
-    day2IconEl.textContent= day2Icon;
+    var iconDay2 = document.createElement("IMG");
+    iconDay2.setAttribute("src", "http://openweathermap.org/img/wn/" + day2Icon + "@2x.png");
+    iconDay2.setAttribute("width", "30");
+    iconDay2.setAttribute("height", "30");
+    iconDay2.setAttribute("alt", "Weather Icon");
+    document.getElementById("day2-icon").appendChild(iconDay2);
 
     var day2Temp=data.daily[1].temp.day;
     day2TempEl.textContent= day2Temp;
@@ -141,7 +151,12 @@ var display5DayForecast = function(data) {
 
     //day 3 data display
     var day3Icon=data.daily[2].weather[0].icon;
-    day3IconEl.textContent= day3Icon;
+    var iconDay3 = document.createElement("IMG");
+    iconDay3.setAttribute("src", "http://openweathermap.org/img/wn/" + day3Icon + "@2x.png");
+    iconDay3.setAttribute("width", "30");
+    iconDay3.setAttribute("height", "30");
+    iconDay3.setAttribute("alt", "Weather Icon");
+    document.getElementById("day3-icon").appendChild(iconDay3);
 
     var day3Temp=data.daily[2].temp.day;
     day3TempEl.textContent= day3Temp;
@@ -154,7 +169,12 @@ var display5DayForecast = function(data) {
 
     //day 4 data display
     var day4Icon=data.daily[3].weather[0].icon;
-    day4IconEl.textContent= day4Icon;
+    var iconDay4 = document.createElement("IMG");
+    iconDay4.setAttribute("src", "http://openweathermap.org/img/wn/" + day4Icon + "@2x.png");
+    iconDay4.setAttribute("width", "30");
+    iconDay4.setAttribute("height", "30");
+    iconDay4.setAttribute("alt", "Weather Icon");
+    document.getElementById("day4-icon").appendChild(iconDay4);
 
     var day4Temp=data.daily[3].temp.day;
     day4TempEl.textContent= day4Temp;
@@ -167,7 +187,12 @@ var display5DayForecast = function(data) {
 
     //day 5 data display
     var day5Icon=data.daily[4].weather[0].icon;
-    day5IconEl.textContent= day5Icon;
+    var iconDay5 = document.createElement("IMG");
+    iconDay5.setAttribute("src", "http://openweathermap.org/img/wn/" + day5Icon + "@2x.png");
+    iconDay5.setAttribute("width", "30");
+    iconDay5.setAttribute("height", "30");
+    iconDay5.setAttribute("alt", "Weather Icon");
+    document.getElementById("day5-icon").appendChild(iconDay5);
 
     var day5Temp=data.daily[4].temp.day;
     day5TempEl.textContent= day5Temp;
