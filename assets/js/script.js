@@ -215,5 +215,17 @@ var display5DayForecast = function(data) {
  var displayCurrentDate = document.getElementById('current-date'); 
  displayCurrentDate.innerHTML = currentDate.format('MM-DD-YYYY'); 
  
- var displayDay1 = document.getElementById('dat1-date');
- displayDay1.innerHTML = currentDate.add(1, 'days');
+ var displayDay1 = document.getElementById('day1-date');
+ displayDay1.innerHTML = currentDate.add(1, 'days').format('MM-DD-YYYY');
+
+ var displayDay2 = document.getElementById('day2-date');
+ displayDay2.innerHTML = currentDate.add(1, 'days').format('MM-DD-YYYY');
+
+ var displayDay3 = document.getElementById('day3-date');
+ displayDay3.innerHTML = currentDate.add(1, 'days').format('MM-DD-YYYY');
+
+ var displayDay4 = document.getElementById('day4-date');
+ displayDay4.innerHTML = currentDate.add(1, 'days').format('MM-DD-YYYY');
+
+ var displayDay5 = document.getElementById('day5-date');
+ displayDay5.innerHTML = currentDate.add(1, 'days').format('MM-DD-YYYY');
