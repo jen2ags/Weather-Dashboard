@@ -91,7 +91,7 @@ var displayCurrentWeather = function(data) {
     
 
     var currentWeatherIcon = document.createElement("IMG");
-    currentWeatherIcon.setAttribute("src", "http://openweathermap.org/img/wn/" + currentIcon + "@2x.png");
+    currentWeatherIcon.setAttribute("src", "https://openweathermap.org/img/wn/" + currentIcon + "@2x.png");
     currentWeatherIcon.setAttribute("width", "50");
     currentWeatherIcon.setAttribute("height", "50");
     currentWeatherIcon.setAttribute("alt", "Weather Icon");
@@ -117,7 +117,7 @@ var display5DayForecast = function(data) {
     //display's the weather icon using the link
     var day1Icon=data.daily[0].weather[0].icon;
     var iconDay1 = document.createElement("IMG");
-    iconDay1.setAttribute("src", "http://openweathermap.org/img/wn/" + day1Icon + "@2x.png");
+    iconDay1.setAttribute("src", "https://openweathermap.org/img/wn/" + day1Icon + "@2x.png");
     iconDay1.setAttribute("width", "30");
     iconDay1.setAttribute("height", "30");
     iconDay1.setAttribute("alt", "Weather Icon");
@@ -136,7 +136,7 @@ var display5DayForecast = function(data) {
     //display's the weather icon using the link
     var day2Icon=data.daily[1].weather[0].icon;
     var iconDay2 = document.createElement("IMG");
-    iconDay2.setAttribute("src", "http://openweathermap.org/img/wn/" + day2Icon + "@2x.png");
+    iconDay2.setAttribute("src", "https://openweathermap.org/img/wn/" + day2Icon + "@2x.png");
     iconDay2.setAttribute("width", "30");
     iconDay2.setAttribute("height", "30");
     iconDay2.setAttribute("alt", "Weather Icon");
@@ -155,7 +155,7 @@ var display5DayForecast = function(data) {
     //display's the weather icon using the link
     var day3Icon=data.daily[2].weather[0].icon;
     var iconDay3 = document.createElement("IMG");
-    iconDay3.setAttribute("src", "http://openweathermap.org/img/wn/" + day3Icon + "@2x.png");
+    iconDay3.setAttribute("src", "https://openweathermap.org/img/wn/" + day3Icon + "@2x.png");
     iconDay3.setAttribute("width", "30");
     iconDay3.setAttribute("height", "30");
     iconDay3.setAttribute("alt", "Weather Icon");
@@ -174,7 +174,7 @@ var display5DayForecast = function(data) {
     //display's the weather icon using the link
     var day4Icon=data.daily[3].weather[0].icon;
     var iconDay4 = document.createElement("IMG");
-    iconDay4.setAttribute("src", "http://openweathermap.org/img/wn/" + day4Icon + "@2x.png");
+    iconDay4.setAttribute("src", "https://openweathermap.org/img/wn/" + day4Icon + "@2x.png");
     iconDay4.setAttribute("width", "30");
     iconDay4.setAttribute("height", "30");
     iconDay4.setAttribute("alt", "Weather Icon");
@@ -193,7 +193,7 @@ var display5DayForecast = function(data) {
     //display's the weather icon using the link
     var day5Icon=data.daily[4].weather[0].icon;
     var iconDay5 = document.createElement("IMG");
-    iconDay5.setAttribute("src", "http://openweathermap.org/img/wn/" + day5Icon + "@2x.png");
+    iconDay5.setAttribute("src", "https://openweathermap.org/img/wn/" + day5Icon + "@2x.png");
     iconDay5.setAttribute("width", "30");
     iconDay5.setAttribute("height", "30");
     iconDay5.setAttribute("alt", "Weather Icon");
