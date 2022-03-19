@@ -29,6 +29,8 @@ var day5TempEl = document.querySelector("#day5-temp");
 var day5WindEl = document.querySelector("#day5-wind");
 var day5HumidityEl = document.querySelector("#day5-humidity");
 
+
+
 var formSubmitHandler = function(event) {
     event.preventDefault();
     //get value from input element
@@ -87,6 +89,13 @@ var displayCurrentWeather = function(data) {
     //display's weather icon, temp, wind speed, humidity, & UV index
     var currentIcon=data.current.weather[0].icon;
     currentIconEl.textContent=currentIcon;
+
+    var currentWeatherIcon = document.createElement("IMG");
+    currentWeatherIcon.setAttribute("src", "http://openweathermap.org/img/wn/" + currentIcon + "@2x.png");
+    currentWeatherIcon.setAttribute("width", "40");
+    currentWeatherIcon.setAttribute("height", "40");
+    currentWeatherIcon.setAttribute("alt", "Weather Icon");
+    document.body.appendChild(currentWeatherIcon);
 
     var currentTemp=data.current.temp;
     currentTempEl.textContent=currentTemp;
