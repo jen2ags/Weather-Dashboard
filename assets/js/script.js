@@ -83,6 +83,7 @@ cityFormEl.addEventListener("submit", formSubmitHandler);
 
 //displays the current day's weather
 var displayCurrentWeather = function(data) {
+    
     //display's weather icon, temp, wind speed, humidity, & UV index
     var currentIcon=data.current.weather[0].icon;
     currentIconEl.textContent=currentIcon;
