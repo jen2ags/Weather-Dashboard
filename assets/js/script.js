@@ -114,6 +114,7 @@ var displayCurrentWeather = function(data) {
 var display5DayForecast = function(data) {
 
     //day 1 data display
+    //display's the weather icon using the link
     var day1Icon=data.daily[0].weather[0].icon;
     var iconDay1 = document.createElement("IMG");
     iconDay1.setAttribute("src", "http://openweathermap.org/img/wn/" + day1Icon + "@2x.png");
@@ -132,6 +133,7 @@ var display5DayForecast = function(data) {
     day1HumidityEl.textContent= day1Humidity;
 
     //day 2 data display
+    //display's the weather icon using the link
     var day2Icon=data.daily[1].weather[0].icon;
     var iconDay2 = document.createElement("IMG");
     iconDay2.setAttribute("src", "http://openweathermap.org/img/wn/" + day2Icon + "@2x.png");
@@ -150,6 +152,7 @@ var display5DayForecast = function(data) {
     day2HumidityEl.textContent= day2Humidity;
 
     //day 3 data display
+    //display's the weather icon using the link
     var day3Icon=data.daily[2].weather[0].icon;
     var iconDay3 = document.createElement("IMG");
     iconDay3.setAttribute("src", "http://openweathermap.org/img/wn/" + day3Icon + "@2x.png");
@@ -168,6 +171,7 @@ var display5DayForecast = function(data) {
     day3HumidityEl.textContent= day3Humidity;
 
     //day 4 data display
+    //display's the weather icon using the link
     var day4Icon=data.daily[3].weather[0].icon;
     var iconDay4 = document.createElement("IMG");
     iconDay4.setAttribute("src", "http://openweathermap.org/img/wn/" + day4Icon + "@2x.png");
@@ -186,6 +190,7 @@ var display5DayForecast = function(data) {
     day4HumidityEl.textContent= day4Humidity;
 
     //day 5 data display
+    //display's the weather icon using the link
     var day5Icon=data.daily[4].weather[0].icon;
     var iconDay5 = document.createElement("IMG");
     iconDay5.setAttribute("src", "http://openweathermap.org/img/wn/" + day5Icon + "@2x.png");
@@ -205,3 +210,10 @@ var display5DayForecast = function(data) {
 
 };
 
+
+ var currentDate = moment(); 
+ var displayCurrentDate = document.getElementById('current-date'); 
+ displayCurrentDate.innerHTML = currentDate.format('MM-DD-YYYY'); 
+ 
+ var displayDay1 = document.getElementById('dat1-date');
+ displayDay1.innerHTML = currentDate.add(1, 'days');

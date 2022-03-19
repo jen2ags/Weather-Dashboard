@@ -65,7 +65,8 @@
       <div class="tile is-9 is-vertical is-parent">
         <div class="tile is-child box">
           <h3 class=" title is-4 current-city"><span id ="current-city"></span></h3> 
-          <h3 class="title is-4 current-date"> <span id="current-icon"></span></h3>
+          <h3 class="title is-4 current-date" id="current-date"> </h3>
+              <span id="current-icon"></span>
           <div class="subtitle has-text-weight-medium temp" id="current-weather-container">Temperature: <span id="current-temp"></span> &deg F</div>
           <div class="subtitle has-text-weight-medium wind">Wind: <span id="current-wind"></span> mph</div>
           <div class="subtitle has-text-weight-medium humidity">Humidity: <span id="current-humidity"></span> %</div>
@@ -79,12 +80,12 @@
                 <div class="tile is-9 is-parent">
                     <!--Day 1-->    
                     <div class="tile is-child card box">
-                        <p>
+                        <p id="day1-date"></p>
                             <span id="day1-icon"></span>
                             <div class="has-text-weight-medium temp">Temperature: <span class="has-text-weight-normal" id="day1-temp"></span> &deg F</div>
                             <div class="has-text-weight-medium wind">Wind: <span class="has-text-weight-normal" id="day1-wind"></span> mph</div>
                             <div class="has-text-weight-medium humidity">Humidity: <span class="has-text-weight-normal" id="day1-humidity"></span> %</div>
-                        </p>
+    
                     </div>
                     <!--Day 2-->
                     <div class="tile is-child card box">
@@ -128,6 +129,8 @@
     
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 <script src="assets\js\script.js"></script>
 </body>
 </html>
+
