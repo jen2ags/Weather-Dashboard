@@ -229,3 +229,10 @@ var display5DayForecast = function(data) {
 
  var displayDay5 = document.getElementById('day5-date');
  displayDay5.innerHTML = currentDate.add(1, 'days').format('MM-DD-YYYY');
+
+
+ function store() {
+    var value = $(this).siblings('.recent-city').val();
+        localStorage.setItem(value);
+
+}
