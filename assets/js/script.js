@@ -30,19 +30,22 @@ var day5WindEl = document.querySelector("#day5-wind");
 var day5HumidityEl = document.querySelector("#day5-humidity");
 
 
-
 var formSubmitHandler = function(event) {
     event.preventDefault();
     //get value from input element
     var city = cityInputEl.value.trim();
-
+    store(city);
     if (city) {
         getWeatherData(city);
         cityInputEl.value = "";
     } else {
         alert("Please enter a city");
     }
-};
+
+    
+    
+    };
+
 
 
 
@@ -85,7 +88,7 @@ cityFormEl.addEventListener("submit", formSubmitHandler);
 
 //displays the current day's weather
 var displayCurrentWeather = function(data) {
-
+    //resets current weather Icon with new search
     currentIconEl.innerHTML = "";
     
     //display's weather icon, temp, wind speed, humidity, & UV index
@@ -113,7 +116,7 @@ var displayCurrentWeather = function(data) {
 
 //displays the 5 day forecast and the weather icon, temp, wind, and humidity for each day
 var display5DayForecast = function(data) {
-
+    //resets each span element when a new search
     day1IconEl.innerHTML = "";
     day2IconEl.innerHTML = "";
     day3IconEl.innerHTML = "";
@@ -238,8 +241,18 @@ var display5DayForecast = function(data) {
  displayDay5.innerHTML = currentDate.add(1, 'days').format('MM-DD-YYYY');
 
 
- function store() {
-    var value = $(this).siblings('.recent-city').val();
-        localStorage.setItem(value);
+ function store(city) {
+     var storedHistory =JSON.parse(localStorage.getItem('search-history')) || []
+     console.log(storedHistory)
+     if (storedHistory.includes(city)) {
+        return localStorage.setItem('search-history', JSON.stringify(storedHistory))
+    }
+     
+     storedHistory.push(city)
+     localStorage.setItem('search-history',JSON.stringify(storedHistory))
+ }
 
-}
+ var getStoredItem = function(){
+ (localStorage.getItem('search-history'));
+ }
+ getStoredItem();
