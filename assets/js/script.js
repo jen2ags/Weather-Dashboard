@@ -253,6 +253,6 @@ var display5DayForecast = function(data) {
  }
 
  var getStoredItem = function(){
- (localStorage.getItem('search-history'));
+ $("container").text(localStorage.getItem('search-history'));
  }
  getStoredItem();
