@@ -85,11 +85,12 @@ cityFormEl.addEventListener("submit", formSubmitHandler);
 
 //displays the current day's weather
 var displayCurrentWeather = function(data) {
+
+    currentIconEl.innerHTML = "";
     
     //display's weather icon, temp, wind speed, humidity, & UV index
     var currentIcon=data.current.weather[0].icon;
     
-
     var currentWeatherIcon = document.createElement("IMG");
     currentWeatherIcon.setAttribute("src", "https://openweathermap.org/img/wn/" + currentIcon + "@2x.png");
     currentWeatherIcon.setAttribute("width", "50");
@@ -112,6 +113,12 @@ var displayCurrentWeather = function(data) {
 
 //displays the 5 day forecast and the weather icon, temp, wind, and humidity for each day
 var display5DayForecast = function(data) {
+
+    day1IconEl.innerHTML = "";
+    day2IconEl.innerHTML = "";
+    day3IconEl.innerHTML = "";
+    day4IconEl.innerHTML = "";
+    day5IconEl.innerHTML = "";
 
     //day 1 data display
     //display's the weather icon using the link
