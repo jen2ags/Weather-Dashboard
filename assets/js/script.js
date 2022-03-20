@@ -252,7 +252,30 @@ var display5DayForecast = function(data) {
      localStorage.setItem('search-history',JSON.stringify(storedHistory))
  }
 
- var getStoredItem = function(){
- $("container").text(localStorage.getItem('search-history'));
- }
- getStoredItem();
+ var searchHistory = JSON.parse(localStorage.getItem('search-history'))
+ 
+    var element = document.getElementById('search-0')
+    element.innerText = searchHistory[0];
+
+    var element = document.getElementById('search-1')
+    element.innerText = searchHistory[1];
+
+    var element = document.getElementById('search-2')
+    element.innerText = searchHistory[2];
+
+    var element = document.getElementById('search-3')
+    element.innerText = searchHistory[3];
+
+    var element = document.getElementById('search-4')
+    element.innerText = searchHistory[4];
+
+    var element = document.getElementById('search-5')
+    element.innerText = searchHistory[5];
+
+    var element = document.getElementById('search-6')
+    element.innerText = searchHistory[6];
+
+    var element = document.getElementById('search-7')
+    element.innerText = searchHistory[7];
+
+    
