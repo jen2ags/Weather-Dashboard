@@ -15,7 +15,7 @@ The Weather Dashboard is used to allow clients to be able to view and compare th
 https://jen2ags.github.io/Weather-Dashboard/
 
 ## Screen Shot
-![Screenshot Weather Dashboard]()
+![Screenshot Weather Dashboard](https://github.com/jen2ags/Weather-Dashboard/blob/main/assets/Images/Screenshot%20of%20Weather-dashboard.png)
 
 
 ## Contribution
